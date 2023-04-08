@@ -6,11 +6,17 @@
 // it does not need to return.
 
 function logBetweenStepper(min, max, step) {
-    // loop starts at min, run while <= max, increment by the step (+= step)
-    // console.log(index)
-    for (let i = min; i <= max; i += step) { // i += step is the same as i = i + step
-        console.log(i);
-    }
+    // for loop, start at min, while index <= max, increment by step
+    // console log the index
+    // for (let index = min; index <= max; index += step) {
+    //     console.log(index)
+    // }
+
+    // for (let index = min; index <= max; index++) {
+    //     if (step % index === 0) {
+    //         console.log(index);
+    //     }
+	// }
 }
 
 

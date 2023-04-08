@@ -5,11 +5,12 @@
 // Write two versions of this function, 
 // using conditionals (if) and without using conditionals.
 
-
 // function threeOrSeven(num) {
-//   // check if num is divisible by 3
-//   // check if num is divisible by 7
-//     return (num % 3 === 0) || (num % 7 === 0)
+//     if (num % 3 === 0 || num % 7 === 0) {
+//         return true
+//     } else {
+//         return false
+//     }
 // }
 
 // function threeOrSeven(num) {
@@ -22,10 +23,17 @@
 //     }
 // }
 
+// function threeOrSeven(num) {
+//     return (num % 3 === 0) || (num % 7 === 0)
+// }
+
 function threeOrSeven(num) {
     if (num % 3 === 0 || num % 7 === 0) return true
     return false
 }
+
+
+
 
 console.log(threeOrSeven(3));   // => true
 console.log(threeOrSeven(42));  // => true

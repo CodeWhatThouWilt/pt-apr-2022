@@ -2,19 +2,18 @@
 // in an array of numbers and returns the total 
 // sum of all the numbers.
 
-
-function sumArray(array) {
-    // define a sum variable that starts at 0
-    // for loop, index starts at 0, goes until i is 1 below length, 
-    // increments by 1
-    // add the current index of the array to the sum
-    // console log or return the sum
+function sumArray(arr) {
+    // create a sum variable to track addition
+    // create a loop, index starts at 0, i < array length, increment i
+    // add to our sum variable
     let sum = 0
-    for (let i = 0; i < array.length; i++) {
-        // console.log('Current element', array[i])
-        sum += array[i]// sum = sum + array[i]
+    for (let i = 0; i <= arr.length; i++) {
+        const currNum = arr[i]
+        console.log(currNum, "index:", i)
+        sum += currNum
     }
-    console.log(sum)
+    return sum
+
 }
 
 sumArray([5, 6, 4]);

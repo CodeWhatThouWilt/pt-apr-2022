@@ -1,5 +1,4 @@
 // write a function that returns the avg of two numbers
-
 function averageOfTwo(numOne, numTwo) {
     return (numOne + numTwo) / 2
 }
