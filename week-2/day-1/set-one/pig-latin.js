@@ -15,6 +15,28 @@
 // 2. For words that start with a non-vowel, move all letters that come
 // **before the first vowel** to the **end of the word** then add 'ay'
 
+const pigLatinWord = function(word) {
+    // Declared our vowels as a string
+    const vowels = 'aeiou';
+    // Checked to see if our vowels included the first letter of our incoming word
+    if (vowels.includes(word[0])) {
+        // If above is true, we just return our word + the string of 'yay'
+        return word + "yay";
+    }
+
+    // Looping through the indexes of our word
+    for (let i = 0; i < word.length; i++) {
+        // Checking to see if any of the iterations of our words letters are a vowel
+        if (vowels.includes(word[i])) {
+            // Grabbing the first vowel found up to the end of the word
+            const first = word.slice(i);
+            // Grabbing everything leading but not including first vowel
+            const second = word.slice(0, i);
+            // Returning our slices + 'ay' the return will immediately end the function
+            return first + second + 'ay'
+        }
+    }
+}
 
 
 console.log(pigLatinWord("apple")); //=> "appleyay"
