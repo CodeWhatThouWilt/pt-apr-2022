@@ -71,7 +71,7 @@ const whileLoopUncompress = function(str) {
 // console.log(uncompress('a5b2c4z1')); // 'aaaaabbccccz'
 // console.log(uncompress('b1o2t1')); // 'boot'
 
-// ======= RUN TO TEST FOR LOOP =======
+// ======= RUN TO TEST WHILE LOOP =======
 console.log(whileLoopUncompress('x3y4z2')); // 'xxxyyyyzz'
 console.log(whileLoopUncompress('a5b2c4z1')); // 'aaaaabbccccz'
 console.log(whileLoopUncompress('b1o2t1')); // 'boot'
