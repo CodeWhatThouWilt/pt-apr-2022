@@ -3,28 +3,28 @@
 // return the total product of all numbers multiplied together.
 
 // ======= FOR LOOP ========
-// function twoDimensionalProduct(arr) {
-// 	// 1. create a product variable to store the product
-// 	let product = 1;
+function twoDimensionalProduct(arr) {
+	// 1. create a product variable to store the product
+	let product = 1;
 
-// 	// 2. Nested for loops to iterate through our rows and columns
-// 	for (let i = 0; i < arr.length; i++) {
-// 		const currRow = arr[i];
+	// 2. Nested for loops to iterate through our rows and columns
+	for (let i = 0; i < arr.length; i++) {
+		const currRow = arr[i];
 
-// 		for (let j = 0; j < currRow.length; j++) {
-//             const currCol = currRow[j];
-//             // 3. Inside our column loop we need to multiply the current element
-//             // with the current product variable
+		for (let j = 0; j < currRow.length; j++) {
+            const currCol = currRow[j];
+            // 3. Inside our column loop we need to multiply the current element
+            // with the current product variable
 
-// 			product *= currCol; // product = product * currCol
-// 		}
-// 	}
-//     // 4. return the product variable
-// 	return product;
-// }
+			product *= currCol; // product = product * currCol
+		}
+	}
+    // 4. return the product variable
+	return product;
+}
 
 // ======= WHILE LOOP =======
-function twoDimensionalProduct(arr) {
+function whileLooptwoDimensionalProduct(arr) {
 // 1. create a product variable to store the product
 	let product = 1;
 
@@ -47,15 +47,30 @@ function twoDimensionalProduct(arr) {
 	return product;
 }
 
+// ======= RUN TO TEST FOR LOOP =======
+// let arr1 = [
+//     [6, 4],
+//     [5],
+//     [3, 1]
+// ];
+// console.log(twoDimensionalProduct(arr1)); // 360
+
+// let arr2 = [
+//     [11, 4],
+//     [2]
+// ];
+// console.log(twoDimensionalProduct(arr2)); // 88
+
+// ======= RUN TO TEST WHILE LOOP =======
 let arr1 = [
     [6, 4],
     [5],
     [3, 1]
 ];
-console.log(twoDimensionalProduct(arr1)); // 360
+console.log(whileLooptwoDimensionalProduct(arr1)); // 360
 
 let arr2 = [
     [11, 4],
     [2]
 ];
-console.log(twoDimensionalProduct(arr2)); // 88
+console.log(whileLooptwoDimensionalProduct(arr2)); // 88
