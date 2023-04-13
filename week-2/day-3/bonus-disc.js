@@ -41,12 +41,12 @@ function isEven(number) {
 function whileLoopEvenNumsFunc(arr) {
     const retArr = [];
 
-    let i = 0;
-    while (i < arr.length) {
+    let i = 0; // <--- This is the index the while loop will start at
+    while (i < arr.length) { // <--- This is the condition that will be checked every time this loop is run
         const num = arr[i];
         const bool = isEven(num)
         retArr.push([num, bool]);
-        i += 1;
+        i += 1; // Increment loop by one (if we do not increase the index then our condition is never met. Meaning this will run forever!)
     }
     return retArr
 }
