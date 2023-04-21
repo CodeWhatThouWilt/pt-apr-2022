@@ -9,7 +9,7 @@ const addNums = (num1, num2) => {
 const multiplyNums = (num1, num2) => num1 * num2;
 
 
-
+    
 // Wednesday - Objects / object iterations 
 const obj = {};
 // Add to objects
