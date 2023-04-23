@@ -22,19 +22,19 @@ const nestedArr = [
     ]
 ];
 
-const getSecondObjValues = arr => {
+// const getSecondObjValues = arr => {
 
-    for (let i = 0; i < arr.length; i++) {
-        const subArr = arr[i];
+//     for (let i = 0; i < arr.length; i++) {
+//         const subArr = arr[i];
 
-        // Check to see if subArr has more than one object
-        if (subArr.length > 1) {
-			const secondObjKey = Object.keys(subArr[1])[0];
-			console.log(subArr[1][secondObjKey]);
-		} else {
-			console.log(null);
-		}
-    }
-}
+//         // Check to see if subArr has more than one object
+//         if (subArr.length > 1) {
+// 			const secondObjKey = Object.keys(subArr[1])[0];
+// 			console.log(subArr[1][secondObjKey]);
+// 		} else {
+// 			console.log(null);
+// 		}
+//     }
+// }
 
 getSecondObjValues(nestedArr);               // 2 4 null 8
