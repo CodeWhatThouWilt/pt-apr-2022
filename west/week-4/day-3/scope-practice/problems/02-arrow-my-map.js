@@ -18,7 +18,17 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 ***********************************************************************/
 
-// Your code here
+const arrowMyMap = (arr, cb) => {
+  const newArr = [];
+  arr.forEach(element => {
+    const res = cb(element);
+    newArr.push(res);
+  });
+  return newArr;
+}
+
+// const arrowMyMap = (arr, cb) => arr.reduce((acc, ele) => [...acc, cb(ele)],[]);
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

@@ -11,7 +11,12 @@ arrowRestSum(1, 2, 3, 4, 5, 6, 7, 8, 9); // => 45
 arrowRestSum(0); // => 0
 ***********************************************************************/
 
-// Your code here
+const arrowRestSum = (...nums) => {
+  const sum = nums.reduce((acc, num) => acc + num);
+  return sum;
+}
+
+// const arrowRestSum = (...nums) => nums.reduce((acc, num) => acc + num);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
