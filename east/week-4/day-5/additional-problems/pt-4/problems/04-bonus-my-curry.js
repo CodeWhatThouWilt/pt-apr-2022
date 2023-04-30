@@ -19,7 +19,15 @@
 */
 
 function myCurry(func, numArgs) {
-  
+  const nums = [];
+  const innerFunc = (num) => {
+    nums.push(num);
+    if (nums.length === numArgs) {
+      return func(...nums);
+    }
+    return innerFunc
+  }
+  return innerFunc;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
