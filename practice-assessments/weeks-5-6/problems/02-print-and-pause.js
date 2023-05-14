@@ -25,12 +25,18 @@ on the command line.
 ***********************************************************************/
 
 function printAndPause(nums) {
-  // Your code here
+	if (nums.length === 0) return;
+
+	console.log(nums[0]);
+
+	setTimeout(printAndPause, nums[0], nums.slice(1));
 }
+
+// printAndPause([200, 800, 200, 800, 200, 800]);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
-  module.exports = printAndPause;
+	module.exports = printAndPause;
 } catch {
-  module.exports = null;
+	module.exports = null;
 }

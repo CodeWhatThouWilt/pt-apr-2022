@@ -55,12 +55,44 @@ on the command line.
 ***********************************************************************/
 
 function eliminateType(arr) {
-  // Your code here
+	return (data) => {
+		return arr.filter((el) => {
+			return typeof el !== data;
+		});
+	};
 }
+
+// const eliminateType = (arr) => (data) => arr.filter((el) => typeof el !== data);
+
+// function eliminateType(arr) {
+// 	return (data) => {
+// 		return arr.reduce((acc, el) => {
+// 			if (typeof el !== data) {
+// 				return [...acc, el];
+// 			}
+// 			return acc;
+// 		}, []);
+// 	};
+// }
+
+// function eliminateType(arr) {
+// 	const innerFunc = (data, newArr = [], copy = arr.slice()) => {
+// 		if (copy.length === 0) return newArr;
+
+// 		if (typeof copy[0] !== data) {
+// 			newArr.push(copy[0]);
+// 		}
+
+// 		copy.splice(0, 1);
+
+// 		return innerFunc(data, newArr, copy);
+// 	};
+// 	return innerFunc;
+// }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
-  module.exports = eliminateType;
+	module.exports = eliminateType;
 } catch {
-  module.exports = null;
+	module.exports = null;
 }

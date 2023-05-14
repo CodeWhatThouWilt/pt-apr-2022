@@ -32,28 +32,45 @@ on the command line.
 
 ***********************************************************************/
 
-  function printOuterNumsFirst(nums) {
-    if (nums.length === 1) return;
+function printOuterNumsFirst(nums) {
+	if (nums.length === 0) return;
 
-    // extract the number from the beginning if the length of the array is even
-    // else, extract from the end
-    let num;
-    if (nums.length % 2 === 0) {
-      num = nums.pop();
-    } else {
-      num = nums.shift();
-    }
+	// extract the number from the beginning if the length of the array is even
+	// else, extract from the end
+	let num;
+	if (nums.length % 2 === 0) {
+		num = nums.shift();
+	} else {
+		num = nums.pop();
+	}
 
-    // print the extracted number
-    console.log(num);
+	// print the extracted number
+	console.log(num);
 
-    // Make a recursive call with the modified nums array.
-    printOuterNumsFirst(nums);
-  }
+	// Make a recursive call with the modified nums array.
+	printOuterNumsFirst(nums);
+}
+
+printOuterNumsFirst([1, 2, 3, 4, 5, 6, 7, 8]);
+// 1
+// 8
+// 2
+// 7
+// 3
+// 6
+// 4
+// 5
+console.log();
+printOuterNumsFirst([21, 4, 6, 93, 78]);
+// 78
+// 21
+// 93
+// 4
+// 6
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
-  module.exports = printOuterNumsFirst;
+	module.exports = printOuterNumsFirst;
 } catch {
-  module.exports = null;
+	module.exports = null;
 }

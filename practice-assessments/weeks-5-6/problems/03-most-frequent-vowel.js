@@ -62,14 +62,58 @@ on the command line.
 
 ***********************************************************************/
 
-const VOWELS = ['a', 'e', 'i', 'o', 'u'];
+// Alternative base case: credit - Anthony
+// if (words.length === 0) {
+// 	const mostFrequent = Math.max(...Object.values(counter));
+// 	for (const char in counter) {
+// 		if (counter[char] === mostFrequent) return char;
+// 	}
+// 	return "";
+// }
+
+const VOWELS = ["a", "e", "i", "o", "u"];
+
 const mostFrequentVowel = function (words, counter = {}) {
-  // Your code here
-}
+	if (Array.isArray(words)) words = words.join("");
+
+	if (words.length === 0) {
+		const keys = Object.keys(counter);
+
+		if (keys.length === 0) return "";
+
+		let highestCount = 0;
+		let highestLetter;
+
+		keys.forEach((key) => {
+			const val = counter[key];
+			if (val > highestCount) {
+				highestCount = val;
+				highestLetter = key;
+			}
+		});
+		return highestLetter;
+	}
+
+	const letter = words[0];
+
+	if (VOWELS.includes(letter)) {
+		if (letter in counter) {
+			counter[letter]++;
+		} else {
+			counter[letter] = 1;
+		}
+	}
+
+	return mostFrequentVowel(words.slice(1), counter);
+};
+
+words = ["apple", "pear", "melon", "coconut", "lime"];
+counter = {};
+mostFrequentVowel(words, counter);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
-  module.exports = mostFrequentVowel;
+	module.exports = mostFrequentVowel;
 } catch {
-  module.exports = null;
+	module.exports = null;
 }
