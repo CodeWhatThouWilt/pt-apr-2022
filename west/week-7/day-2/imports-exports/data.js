@@ -6,3 +6,5 @@ const users = [
 	"yakevonyakenshtein",
 	"jacob",
 ];
+
+module.exports = users;

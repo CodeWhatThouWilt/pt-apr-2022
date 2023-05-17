@@ -11,3 +11,8 @@ function removeUser(users, username) {
 	users.splice(index, 1);
 	console.log(`User ${username} removed`);
 }
+
+module.exports = {
+	userExists,
+	removeUser,
+};
