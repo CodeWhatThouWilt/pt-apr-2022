@@ -4,7 +4,7 @@ class Car extends Factory {
 	constructor(name, brand, model, year) {
 		super(name, brand);
 		this.model = model;
-		this.year = year;
+		this.year = year || 2023;
 	}
 
 	lunchBreak() {
@@ -12,9 +12,5 @@ class Car extends Factory {
 	}
 }
 
-const newCar = new Car("Cool Factory", "Ford", "Edge", 1990);
-
+const newCar = new Car("Cool Factory", "Ford", "Edge");
 console.log(newCar);
-
-newCar.factoryDetails();
-newCar.lunchBreak();
