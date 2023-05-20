@@ -6,5 +6,5 @@ class Item {
 }
 
 module.exports = {
-	Item,
+	Item, // Item: Item
 };

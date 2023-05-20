@@ -49,6 +49,10 @@ class Room {
 		const index = this.items.indexOf(item);
 		this.items.splice(index, 1);
 	}
+
+	addItem(item) {
+		this.items.push(item);
+	}
 }
 
 module.exports = {

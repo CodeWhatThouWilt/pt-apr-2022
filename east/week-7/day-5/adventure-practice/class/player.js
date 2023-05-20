@@ -40,16 +40,28 @@ class Player {
 
 	dropItem(itemName) {
 		// Drops an item the player is holding into their current room
-		// Your code here
+		const item = this.getItemByName(itemName);
+		this.removeItem(item);
+		this.currentRoom.addItem(item);
 	}
 
 	eatItem(itemName) {
 		// Allow the player to eat food items, but not non-food items
 		// Your code here
+		const item = this.getItemByName(itemName);
+
+		if (item instanceof Food) {
+			this.removeItem(item);
+		}
 	}
 
 	getItemByName(name) {
 		return this.items.find((item) => item.name === name);
+	}
+
+	removeItem(item) {
+		const index = this.items.indexOf(item);
+		this.items.splice(index, 1);
 	}
 }
 
