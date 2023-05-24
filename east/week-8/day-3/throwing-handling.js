@@ -25,11 +25,11 @@
 // }
 
 // ! finally
-try {
-	throw new Error("This ran an error");
-	console.log("This is the try");
-} catch (error) {
-	console.error(error);
-} finally {
-	console.log("I run no matter what. You can't stop me.");
-}
+// try {
+// 	throw new Error("This ran an error");
+// 	console.log("This is the try");
+// } catch (error) {
+// 	console.error(error);
+// } finally {
+// 	console.log("I run no matter what. You can't stop me.");
+// }
