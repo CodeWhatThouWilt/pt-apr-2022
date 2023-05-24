@@ -35,6 +35,18 @@ class Book {
 
 const newBook = new Book("The Odyssey", "Homer");
 
-function test() {
-	console.log(this);
-}
+// ! An arrow function maintains context of its lexical scope, a regular function does not.
+
+// const arrowRet = newBook.arrowFunc();
+// arrowRet();
+
+// const regularFunc = newBook.regularFunc();
+// regularFunc();
+
+newBook.withTimeoutArrow();
+
+newBook.withTimeoutReg();
+
+// function test() {
+// 	console.log(this);
+// }
