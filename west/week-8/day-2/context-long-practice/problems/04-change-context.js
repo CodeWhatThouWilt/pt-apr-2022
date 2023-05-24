@@ -1,5 +1,5 @@
 function changeContext(func, obj) {
-  // Your code here
+	return func.bind(obj)();
 }
 
 /*****************************************************************************/

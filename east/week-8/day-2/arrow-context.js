@@ -35,6 +35,6 @@ class Book {
 
 const newBook = new Book("The Odyssey", "Homer");
 
-function test() {
-	console.log(this);
-}
+newBook.withTimeoutArrow();
+
+newBook.withTimeoutReg();
