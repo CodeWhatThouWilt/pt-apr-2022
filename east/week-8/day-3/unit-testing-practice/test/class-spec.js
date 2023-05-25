@@ -24,13 +24,13 @@ describe("Word", function () {
 
 	describe("removeConsonants function", function () {
 		it("should return the word with the consonants removed", function () {
-			expect.fail("replace with your code");
+			expect(newWord.removeConsonants()).to.equal("eo");
 		});
 	});
 
 	describe("pigLatin function", function () {
 		it("should return the word converted to pig latin", function () {
-			expect.fail("replace with your code");
+			expect(newWord.pigLatin()).to.equal("ellohay");
 		});
 	});
 });

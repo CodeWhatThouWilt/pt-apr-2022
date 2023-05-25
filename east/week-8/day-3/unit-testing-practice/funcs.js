@@ -3,7 +3,13 @@ function isFive(num) {
 }
 
 function isOdd(number) {
-	// Your code here
+	if (number % 2 === 0) {
+		return false;
+	} else if (number % 1 === 0) {
+		return true;
+	} else {
+		throw new Error();
+	}
 }
 
 function myRange(min, max, step = 1) {
