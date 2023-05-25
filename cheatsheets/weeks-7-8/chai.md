@@ -1,5 +1,8 @@
 # Chai Methods and Language Chains
 
+note: If you want the area of the docs that this can be found in, here's a link:
+https://www.chaijs.com/api/bdd/
+
 ## Language chains (Syntactic sugar, not necessary to make things work)
 
 These improve readability but add 0 functionality so they won't affect anything at all. Feel free to chain them however you'd like:
