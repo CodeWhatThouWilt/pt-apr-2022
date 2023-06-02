@@ -1,8 +1,8 @@
 {
-  "name": "timing-benchmarks-practice",
+  "name": "dynamic-array-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "timing-benchmarks.js",
+  "main": "array.js",
   "scripts": {
     "test": "mocha"
   },

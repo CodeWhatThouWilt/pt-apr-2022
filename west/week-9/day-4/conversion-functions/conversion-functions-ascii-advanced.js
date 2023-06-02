@@ -17,8 +17,7 @@ function binaryToHexadecimal(blob) {
 function hexadecimalToBinary(blob) {
 	// const baseTen = parseInt(blob);
 	const baseTen = parseInt(blob.slice(2), 16);
-	const binary = baseTen.toString(2);
-	return `0b${binary}`;
+	return `0b${baseTen.toString(2)}`;
 }
 
 /* Base 10 to ASCII */
@@ -28,32 +27,35 @@ function decimalToAscii(blob) {
 
 /* Base 2 to ASCII */
 function binaryToAscii(blob) {
-	const baseTen = parseInt(blob.slice(2), 2);
+	// const baseTen = parseInt(blob.slice(2), 2);
 	// return decimalToAscii(baseTen);
-	return String.fromCharCode(baseTen);
+	// return String.fromCharCode(baseTen);
+	return String.fromCharCode(blob);
 }
 
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
-	const baseTen = parseInt(blob.slice(2), 16);
-	return String.fromCharCode(baseTen);
+	// const baseTen = parseInt(blob);
+	// const baseTen = parseInt(blob.slice(2), 16);
+	// return String.fromCharCode(baseTen);
+	return String.fromCharCode(blob);
 }
 
-/* ASCII to base 10 */
 // function asciiToDecimal(blob) {
+// 	console.log(blob);
 // 	const arr = [];
-
 // 	for (let i = 0; i < blob.length; i++) {
-// 		const el = blob[i];
-// 		arr.push(el.charCodeAt(0));
+// 		arr.push(blob.charCodeAt(i));
 // 	}
 // 	return arr;
 // }
 
 function asciiToDecimal(blob) {
-	const arr = blob.split("");
+	const arr = blob.split(""); // ["T", "h", "e", "r", "e"]
 	return arr.map((letter) => letter.charCodeAt(0));
 }
+
+// O(n)
 
 // console.log('Binary to hexadecimal:')
 // console.log(binaryToHexadecimal('0b1010')) // '0xa'
