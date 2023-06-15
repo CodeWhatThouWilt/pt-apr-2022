@@ -86,13 +86,8 @@ class BinarySearchTree {
 
 			console.log(currNode.val);
 
-			if (currNode.left) {
-				queue.push(currNode.left);
-			}
-
-			if (currNode.right) {
-				queue.push(currNode.right);
-			}
+			if (currNode.left) queue.push(currNode.left);
+			if (currNode.right) queue.push(currNode.right);
 		}
 	}
 
@@ -105,13 +100,8 @@ class BinarySearchTree {
 
 			console.log(currNode.val);
 
-			if (currNode.left) {
-				stack.push(currNode.left);
-			}
-
-			if (currNode.right) {
-				stack.push(currNode.right);
-			}
+			if (currNode.left) stack.push(currNode.left);
+			if (currNode.right) stack.push(currNode.right);
 		}
 	}
 }
