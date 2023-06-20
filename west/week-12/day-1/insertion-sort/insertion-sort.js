@@ -1,7 +1,7 @@
 // Insertion Sort out-of-place
 // Do not modify the original array
 function insertionSort(arr) {
-  /*
+	/*
   Pseudocode:
 
   Copy the original array
@@ -18,13 +18,35 @@ function insertionSort(arr) {
   Return the sorted array
   */
 
-  // Your code here
+	// Your code here
+	const copy = [...arr];
+	const sorted = [];
+
+	while (copy.length) {
+		console.log(sorted.join(","));
+
+		const val = copy.pop();
+
+		sorted.push(null);
+
+		let i = sorted.length - 1;
+		while (i > 0) {
+			if (sorted[i - 1] < val) {
+				break;
+			} else {
+				sorted[i] = sorted[i - 1];
+				i--;
+			}
+		}
+		sorted[i] = val;
+	}
+	return sorted;
 }
 
 // In-place Insertion Sort
 // Mutates the original array
 function insertionSortInPlace(arr) {
-  /*
+	/*
   Pseudocode:
 
   Set a pointer dividing the array into sorted and unsorted halves
@@ -39,8 +61,28 @@ function insertionSortInPlace(arr) {
   - Increment the dividing pointer and repeat
   Return the mutated array
   */
+	// Your code here
+	let divider = 1;
 
-  // Your code here
+	while (divider < arr.length) {
+		console.log(arr.join(","));
+
+		const val = arr[divider];
+
+		let i = divider;
+		while (i > 0) {
+			if (arr[i - 1] < val) {
+				break;
+			} else {
+				arr[i] = arr[i - 1];
+				i--;
+			}
+		}
+
+		arr[i] = val;
+		divider++;
+	}
+	return arr;
 }
 
 module.exports = [insertionSort, insertionSortInPlace];
