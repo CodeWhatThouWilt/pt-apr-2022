@@ -10,22 +10,22 @@ function selectionSort(arr) {
 
 		// Find the index of the minimum value in the unsorted half
 		// Save and remove the value at the min index
-		// const index = copy.reduce((acc, num, i) => (num < copy[acc] ? i : acc), 0);
-		// const smallestNum = copy[index];
-		let idx = 0;
-		let min = copy[0];
-		for (let i = 0; i < copy.length; i++) {
-			const num = copy[i];
-			if (num < min) {
-				idx = i;
-				min = num;
-			}
-		}
+		const index = copy.reduce((acc, num, i) => (num < copy[acc] ? i : acc), 0);
+		const smallestNum = copy[index];
+		// let idx = 0;
+		// let min = copy[0];
+		// for (let i = 0; i < copy.length; i++) {
+		// 	const num = copy[i];
+		// 	if (num < min) {
+		// 		idx = i;
+		// 		min = num;
+		// 	}
+		// }
 
-		copy.splice(idx, 1);
+		copy.splice(index, 1);
 
 		// Add the min value to the end of the sorted array
-		sorted.push(min);
+		sorted.push(smallestNum);
 	}
 	return sorted;
 }
