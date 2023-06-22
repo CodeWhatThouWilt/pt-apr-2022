@@ -9,7 +9,13 @@ function selectionSort(arr) {
 		console.log(sorted.join(","));
 
 		// Find the index of the minimum value in the unsorted half
-		const index = copy.reduce((acc, num, i) => (num < copy[acc] ? i : acc), 0);
+		// const index = copy.reduce((acc, num, i) => (num < copy[acc] ? i : acc), 0);
+		let index = 0;
+		for (let i = 0; i < copy.length; i++) {
+			if (copy[i] < copy[index]) {
+				index = i;
+			}
+		}
 		// Save and remove the value at the min index
 		const min = copy[index];
 		copy.splice(index, 1);
