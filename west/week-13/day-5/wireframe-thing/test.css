@@ -1,0 +1,32 @@
+.outer-ctn {
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+}
+
+.box-1 {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    padding: 50px;
+    margin: 200px;
+    border: 5px solid black;
+    /* box-sizing: border-box; */
+}
+
+.box-2 {
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100vw;
+    height: 1000px;
+}
+
+.box-3 {
+    background-color: green;
+    height: 100vh;
+    width: 100vw;
+}
