@@ -1,0 +1,70 @@
+/* Element selector */
+h2 {
+    font-size: 48px;
+}
+
+/* Class selectors . */
+.section-ctn {
+    background-color: rgba(255, 127, 80, 0.3);
+    border-radius: 5px;
+}
+
+/* ID selectors # */
+#second-link {
+    color: green;
+    background-color: blue;
+}
+
+
+/* Compound selectors */
+.section-ctn.third-link {
+    text-decoration: none;
+    padding: 5px;
+}
+
+
+/* Multiple selectors for one block (aka rule) , */
+h2,
+p {
+    color: darkblue;
+}
+
+
+/* ----- Combinators ----- */
+
+
+/* Descendant selectors " " */
+section li {
+    font-size: 20px;
+}
+
+
+/* Direct child selector >  */
+section > h3 {
+    background-color: bisque;
+    font-size: 12px;
+}
+
+
+/* Adjacent sibling a + b */
+h3 + p {
+    background-color: brown;
+    padding: 5px;
+}
+
+
+/* Pseudo class : */
+h1:hover {
+    background-color: yellow;
+    padding: 100px;
+}
+
+
+
+/* Specificity */
+/* id > class > element */
+a {
+    background-color: green;
+}
+
+
