@@ -1,0 +1,55 @@
+/* Your code here */
+
+body {
+    background-color: #EFEFEF;
+}
+
+fieldset {
+    background-color: white;
+}
+
+.outer-layer-2{
+    display: flex;
+    flex-direction: column-reverse;
+    /* flex-direction: column; */
+    /* display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "row-1"
+    "row-2"; */
+}
+
+.blue-box {
+    background-color: blue;
+    height: 40px;
+    width: 40px;
+    /* order: 2; */
+    /* grid-area: row-2; */
+    box-sizing: border-box;
+}
+
+.orange-box {
+    background-color: orange;
+    height: 40px;
+    width: 40px;
+    /* order: 1; */
+    /* grid-area: row-1; */
+    box-sizing: border-box;
+}
+
+#problem-3a + #problem-3b,
+#problem-3b + #problem-3c {
+    color: orange;
+}
+
+.outer-layer-4 {
+    box-shadow: 0 0 4px rgba(0,0,255,0.6);
+}
+
+.outer-layer-5 {
+    overflow: hidden visible;
+}
+
+.uppercase.bold {
+    font-family: 'Courier New';
+}

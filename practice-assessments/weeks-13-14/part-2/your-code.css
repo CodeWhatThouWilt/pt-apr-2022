@@ -1,0 +1,14 @@
+/* Your code here */
+
+.outer-layer-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* align-items: end; */
+}
+
+.inner-layer-2 {
+    /* grid-column-start: 2;
+    grid-column-end: 6; */
+    grid-column: 2/6;
+}
