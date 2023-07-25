@@ -18,6 +18,8 @@ function stretch(timeLeft) {
 	});
 }
 
+const returnHere = stretch();
+
 function runOnTreadmill(timeLeft) {
 	return new Promise((resolve, reject) => {
 		if (timeLeft < 500) {
@@ -50,14 +52,22 @@ function liftWeights(timeLeft) {
 
 // refactor this function to handle Promises using async/await instead of
 // .then and .catch
-function workout(totalTime) {
-	stretch(totalTime)
-		.then((timeLeftAfterStretching) => runOnTreadmill(timeLeftAfterStretching))
-		.then((timeLeftAfterRunning) => liftWeights(timeLeftAfterRunning))
-		.then((res) =>
-			console.log(`done working out with ${res / 1000} seconds left`)
-		)
-		.catch((err) => console.log("Error: ", err));
+async function workout(totalTime) {
+	try {
+		const timeLeftAfterStretching = await stretch(totalTime);
+		const timeLeftAfterRunning = await runOnTreadmill(timeLeftAfterStretching);
+		const res = await liftWeights(timeLeftAfterRunning);
+
+		console.log(`done working out with ${res / 1000} seconds left`);
+	} catch (error) {
+		console.log(error);
+	}
+
+	// stretch(totalTime)
+	//   .then(timeLeftAfterStretching => runOnTreadmill(timeLeftAfterStretching))
+	//   .then(timeLeftAfterRunning => liftWeights(timeLeftAfterRunning))
+	//   .then(res => console.log(`done working out with ${res/1000} seconds left`))
+	//   .catch(err => console.log('Error: ', err));
 }
 
 /* ============================ TEST YOUR CODE ============================
