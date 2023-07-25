@@ -1,0 +1,10 @@
+{
+    "test here": {
+        "hello": "sup \"dood\"",
+        "multi line": "This is line one \nthis is line two"
+    },
+    "array thing": [
+        1,
+        5
+    ]
+}
