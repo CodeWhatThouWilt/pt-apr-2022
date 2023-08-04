@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bubbling</title>
+		<link rel="stylesheet" href="index.css" />
+		<script type="module" src="./index.js"></script>
+	</head>
+	<body>
+		<section>
+			<h2>Bubbling / Propagation</h2>
+			<div id="one">
+				<div id="two">
+					<div id="three">
+						<div id="four"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2>Prevent Default</h2>
+			<form>
+				<label>First Name<input type="text" /></label>
+				<label>Last Name<input type="text" /></label>
+				<label>Username<input type="text" /></label>
+				<label>Email<input type="email" /></label>
+				<button>Submit</button>
+			</form>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+body {
+	display: flex;
+	font-family: sans-serif;
+	height: 100vh;
+	margin: 0;
+	background-color: #171b26;
+	color: #d1d4dc;
+}
+
+.page-section {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.page-section section {
+	border: 2px solid #d1d4dc;
+	padding: 15px;
+}
+
+#left-page {
+	padding: 20px;
+	display: flex;
+	gap: 30px;
+}
+
+.name {
+	color: #f23645;
+	font-size: 64px;
+	text-align: center;
+	margin: 10px;
+}
+
+#clock {
+	font-size: 48px;
+	font-weight: 900;
+	display: flex;
+	justify-content: center;
+	color: #089981;
+}
+
+.my-details {
+	width: 260px;
+}
+
+.detail:hover {
+	background-color: #f23645;
+}
+
+.detail {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+#stock-chart {
+	height: 100%;
+	width: 100%;
+}
+
+#tradingview_22e4a {
+	height: 100%;
+	width: 100%;
+}

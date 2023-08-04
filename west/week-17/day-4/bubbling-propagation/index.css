@@ -1,0 +1,64 @@
+body {
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+}
+
+section {
+	border: 3px solid black;
+	width: calc(100% - 100px);
+	padding: 50px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+div {
+	background-color: blue;
+	border: 1px solid white;
+}
+
+#one {
+	height: 500px;
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#two {
+	height: 400px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#three {
+	height: 300px;
+	width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#four {
+	height: 200px;
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+}
