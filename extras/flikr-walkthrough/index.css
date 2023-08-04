@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+nav {
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-right-ctn {
+    display: flex;
+    width: 215px;
+    background-color: green;
+    height: 33px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#button-a {
+    height: 33px;
+    width: 96px;
+}
+
+.nav-right-ctn button {
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+}
