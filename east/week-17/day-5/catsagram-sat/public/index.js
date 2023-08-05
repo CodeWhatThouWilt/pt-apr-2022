@@ -12,7 +12,38 @@ window.onload = async () => {
 	await renderImageSection();
 	renderLikeSection();
 	newImage();
+	renderCommentsSection();
 };
+
+function renderCommentsSection() {
+	const section = document.createElement("section");
+	document.body.appendChild(section);
+
+	const form = document.createElement("form");
+	section.appendChild(form);
+
+	const input = document.createElement("input");
+	form.appendChild(input);
+	input.setAttribute("placeholder", "Add a comment..");
+
+	const submitBtn = document.createElement("button");
+	submitBtn.innerText = "Submit";
+	form.appendChild(submitBtn);
+
+	const ul = document.createElement("ul");
+	section.appendChild(ul);
+
+	submitBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+		const comment = document.querySelector("input");
+
+		const li = document.createElement("li");
+		li.innerText = comment.value;
+
+		const ul = document.querySelector("ul");
+		ul.appendChild(li);
+	});
+}
 
 function renderLikeSection() {
 	const likeSection = document.createElement("section");
