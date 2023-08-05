@@ -1,0 +1,21 @@
+li {
+	list-style-type: none;
+	width: 33%;
+	padding: 10px 15px;
+	margin-bottom: 5px;
+	border-radius: 25px;
+}
+
+/* Your code here */
+li[data-type="drinks"] {
+	background-color: rgb(255, 186, 58);
+}
+
+li[data-type="dairy"] {
+	background-color: rgb(160, 160, 255);
+}
+
+li[data-type="frozen"] {
+	background-color: rgb(42, 42, 255);
+	color: white;
+}

@@ -1,0 +1,91 @@
+// Your code here
+
+window.onload = async () => {
+	const header = document.createElement("header");
+	document.body.appendChild(header);
+
+	const h1 = document.createElement("h1");
+	h1.innerText = "Catstagram";
+
+	header.appendChild(h1);
+
+	await renderImageSection();
+	renderLikeSection();
+	newImage();
+};
+
+function renderLikeSection() {
+	const likeSection = document.createElement("section");
+	likeSection.style.display = "flex";
+	likeSection.style.gap = "20px";
+	likeSection.style.marginTop = "20px";
+
+	document.body.appendChild(likeSection);
+
+	const likeButton = document.createElement("button");
+	likeButton.innerText = "UPVOTE";
+	likeSection.appendChild(likeButton);
+	likeButton.classList.add("vote-btn");
+	likeButton.id = "like";
+
+	const voteNum = document.createElement("div");
+	voteNum.innerText = 0;
+	likeSection.appendChild(voteNum);
+	voteNum.id = "vote-num";
+
+	const dislikeButton = document.createElement("button");
+	dislikeButton.innerText = "DOWNVOTE";
+	likeSection.appendChild(dislikeButton);
+	dislikeButton.classList.add("vote-btn");
+	dislikeButton.id = "dislike";
+
+	likeSection.addEventListener("click", (e) => {
+		if (e.target.innerText === "UPVOTE") {
+			voteNum.innerText++;
+		} else if (e.target.innerText === "DOWNVOTE") {
+			if (voteNum.innerText > 0) voteNum.innerText--;
+		}
+	});
+}
+
+async function renderImageSection() {
+	const imageSection = document.createElement("section");
+
+	document.body.appendChild(imageSection);
+
+	const cat = await getCat();
+
+	const catImg = document.createElement("img");
+	catImg.setAttribute("src", cat.url);
+
+	imageSection.appendChild(catImg);
+}
+
+async function getCat() {
+	const res = await fetch("https://api.thecatapi.com/v1/images/search");
+	const [data] = await res.json();
+	return data;
+}
+
+async function newImage() {
+	const section = document.createElement("section");
+	document.body.appendChild(section);
+	section.style.marginTop = "10px";
+	section.style.marginBottom = "10px";
+
+	const button = document.createElement("button");
+	button.innerText = "Next";
+	button.id = "next-btn";
+	button.classList.add("vote-btn");
+	section.appendChild(button);
+
+	button.addEventListener("click", async () => {
+		const cat = await getCat();
+
+		const img = document.querySelector("img");
+		img.src = cat.url;
+
+		const votes = document.getElementById("vote-num");
+		votes.innerText = 0;
+	});
+}
