@@ -1,0 +1,22 @@
+{
+    "name": "tic-tac-toe-dom-long-practice",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Tic Tac Toe DOM Long Practice",
+    "scripts": {
+        "test": "cypress run",
+        "test-1": "cypress run --spec 'cypress/integration/test1.spec.js'",
+        "test-2": "cypress run --spec 'cypress/integration/test2.spec.js'",
+        "test-3": "cypress run --spec 'cypress/integration/test3.spec.js'",
+        "test-4": "cypress run --spec 'cypress/integration/test1.spec.js,cypress/integration/test2.spec.js,cypress/integration/test3.spec.js'",
+        "test-5": "cypress run --spec 'cypress/integration/test5.spec.js'",
+        "test-6": "cypress run --spec 'cypress/integration/test6.spec.js'",
+        "test-7": "cypress run --spec 'cypress/integration/test7.spec.js'"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "cypress": "^9.7.0"
+    },
+    "author": "curriculum@appacademy.io",
+    "license": "ISC"
+}
