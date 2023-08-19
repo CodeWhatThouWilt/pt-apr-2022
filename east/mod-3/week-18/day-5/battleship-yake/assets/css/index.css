@@ -1,0 +1,50 @@
+/* Your code here */
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: sans-serif;
+}
+
+#win-header {
+	visibility: hidden;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+label {
+	display: flex;
+	flex-direction: column;
+}
+
+#game-board {
+	height: 80vh;
+	width: 80vh;
+	display: flex;
+	flex-wrap: wrap;
+	cursor: pointer;
+}
+
+.square {
+	height: calc(80vh / 9);
+	width: calc(80vh / 9);
+	border: 1px solid black;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 52px;
+}
+
+.hit {
+	background-color: rgb(68, 255, 80);
+}
+
+.miss {
+	background-color: rgb(255, 69, 69);
+}
