@@ -101,6 +101,9 @@ const router = require("express").Router();
 // .get(getAllDogs)
 // .post(createDog);
 
+// ! Be extremely cautious when using validation middleware in a manner
+// ! like this. It's an attempt at a one size fits all solution which
+// ! can have it's pitfalls.
 router.use("/:dogId", validateDogId);
 // router.use((req, res, next) => {
 // 	if (req.method === "POST" || req.method === "PUT") {
@@ -111,12 +114,12 @@ router.use("/:dogId", validateDogId);
 
 router.get("/", getAllDogs);
 router.get("/:dogId", getDogById);
-// router.post("/", validateDogInfo, createDog);
-// router.put("/:dogId", validateDogInfo, updateDog);
+router.post("/", validateDogInfo, createDog);
+router.put("/:dogId", validateDogInfo, updateDog);
 router.delete("/:dogId", deleteDog);
 
-router.use(validateDogInfo);
-router.post("/", createDog);
-router.put("/:dogId", updateDog);
+// router.use(validateDogInfo);
+// router.post("/", createDog);
+// router.put("/:dogId", updateDog);
 
 module.exports = router;
