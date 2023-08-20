@@ -107,6 +107,18 @@ app.get("/info", (req, res) => {
  *          { "id": 98765432, "name": "Honey Sweet", "year": 1967, "isFavorite": false }
  */
 // Your code here
+app.post("/movies", (req, res) => {
+	const { name, year, favorite } = req.body;
+
+	const resObj = {
+		id: Math.floor(Math.random() * 1000000),
+		name,
+		year: parseInt(year),
+		isFavorite: favorite ? true : false,
+	};
+
+	return res.json(resObj);
+});
 
 /**
  *  Advanced Bonus Phase B - Research how to return static
@@ -124,6 +136,7 @@ app.get("/info", (req, res) => {
  *      Test route: /logo.png
  */
 // Your code here
+app.use("/", express.static("public"));
 
 // DO NOT EDIT - Set port and listener
 if (require.main === module) {
