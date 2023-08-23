@@ -74,6 +74,19 @@ app.get("/colors/add/:name", (req, res, next) => {
 	 *  - return new row
 	 */
 	// Your code here
+	db.run(sql, params, (err) => {
+		if (err) {
+			next(err);
+		} else {
+			db.get(sqlLast, [], (err, row) => {
+				if (err) {
+					next(err);
+				} else {
+					res.json(row);
+				}
+			});
+		}
+	});
 });
 
 // Root route - DO NOT MODIFY
