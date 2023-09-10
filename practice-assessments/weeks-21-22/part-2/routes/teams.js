@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { Team, Player, Sport } = require("../db/models");
+const { Team, Player, Sport, Match } = require("../db/models");
 
 router.post("/:id/players", async (req, res) => {
 	const { firstName, lastName, number, isRetired } = req.body;
@@ -54,6 +54,24 @@ router.get("/", async (req, res) => {
 	});
 
 	return res.json(teams);
+});
+
+// Challenge bonus
+router.get("/:teamId/homeMatchesWon", async (req, res) => {
+	const { teamId } = req.params;
+
+	const matches = await Match.findAll({
+		where: {
+			homeTeamId: teamId,
+			winnerId: teamId,
+		},
+		include: {
+			model: Team,
+			as: "HomeTeam",
+		},
+	});
+
+	return res.json(matches);
 });
 
 module.exports = router;
