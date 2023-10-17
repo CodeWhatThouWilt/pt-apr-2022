@@ -50,7 +50,7 @@ const FormIntro = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Username
-          <input value={username} onChange={handleUsername} />
+          <input onChange={handleUsername} />
         </label>
 
         <label>
