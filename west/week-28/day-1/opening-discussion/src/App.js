@@ -1,7 +1,7 @@
 import FormIntro from "./FormIntro";
 
 function App() {
-  return <FormIntro />;
+    return <FormIntro />;
 }
 
 export default App;
