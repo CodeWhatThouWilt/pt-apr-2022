@@ -1,18 +1,17 @@
 import articles from "../data/data.json";
 
 const LOAD_ARTICLES = "article/loadArticles";
-const ADD_ARTICLE = "article/addArticle";
 
-export const loadArticles = () => {
-    return {
-        type: LOAD_ARTICLES,
-        articles,
-    };
-};
+// export const loadArticles = () => {
+//     return {
+//         type: LOAD_ARTICLES,
+//         articles
+//     }
+// }
 
-export const addArticle = (payload) => ({
-    type: ADD_ARTICLE,
-    payload,
+export const loadArticles = () => ({
+    type: LOAD_ARTICLES,
+    articles,
 });
 
 const initialState = { entries: [], isLoading: true };
@@ -20,26 +19,21 @@ const initialState = { entries: [], isLoading: true };
 const articleReducer = (state = initialState, action) => {
     switch (action.type) {
         case LOAD_ARTICLES:
-            return { ...state, entries: [...action.articles] };
-        case ADD_ARTICLE:
-            return { ...state, entries: [...state.entries, action.payload] };
+            return { ...state, entries: [...articles] };
         default:
             return state;
     }
 };
 
 // const articleReducer = (state = initialState, action) => {
-//     const newState = { ...state };
+//     const newState = {...state};
 
 //     switch (action.type) {
 //         case LOAD_ARTICLES:
 //             newState.entries = articles;
 //             return newState;
-//         case ADD_ARTICLE:
-//             newState.entries.push(action.payload);
-//             return newState;
 //         default:
-//             return newState;
+//             return state;
 //     }
 // };
 
