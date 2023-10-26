@@ -1,25 +1,36 @@
-import { Route, Switch } from 'react-router-dom';
-import SingleArticle from '../SingleArticle';
+import { Route, Switch, NavLink } from "react-router-dom";
+import SingleArticle from "../SingleArticle";
+import { useDispatch, useSelector } from "react-redux";
+import { loadArticles } from "../../store/articleReducer";
+import { useEffect } from "react";
 
 const ArticleList = () => {
-  return (
-    <div>
-      <h1>Article List</h1>
-      <ol>
-        <li>Gilligan's Island. Is it true?</li>
-        <li>A Baseball Moment</li>
-        <li>Poke Moment</li>
-        <li>Cool Cats</li>
-        <li>Why Am I At Home</li>
-      </ol>
+    const dispatch = useDispatch();
 
-      <Switch>
-        <Route path='/article/:id'>
-          <SingleArticle />
-        </Route>
-      </Switch>
-    </div>
-  );
+    const articles = useSelector((state) => state.articleState.entries);
+
+    useEffect(() => {
+        dispatch(loadArticles());
+    }, [dispatch]);
+
+    return (
+        <div>
+            <h1>Article List</h1>
+            <ol>
+                {articles.map((article) => (
+                    <NavLink to={`/article/${article.id}`} key={article.id}>
+                        <li>{article.title}</li>
+                    </NavLink>
+                ))}
+            </ol>
+
+            <Switch>
+                <Route path="/article/:id">
+                    <SingleArticle />
+                </Route>
+            </Switch>
+        </div>
+    );
 };
 
 export default ArticleList;
