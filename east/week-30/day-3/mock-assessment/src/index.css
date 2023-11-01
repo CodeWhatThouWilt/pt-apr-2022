@@ -1,0 +1,214 @@
+#root {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ----------Main Element Styling----------- */
+
+section, form {
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  width: 80vw;
+  max-width: 700px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  padding: 20px;
+}
+
+li {
+  margin: 5px 10px;
+}
+
+ul + * {
+  margin: 20px;
+}
+
+section > * {
+  display: block;
+  margin: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(180, 72, 72);
+  text-align: center;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+}
+
+button {
+  background-color: rgb(180, 72, 72);
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 237, 237);
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: square;
+  color: darkred;
+  padding: 0 20px;
+}
+
+/* ---------General Class Styling------------ */
+
+.li-contents-flex {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(216, 216, 216);
+  box-sizing: border-box;
+}
+
+.li-contents-flex > a {
+  color: black;
+  padding: 8px 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.li-contents-flex > a:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+.buttons-container > * {
+  margin: 4px;
+}
+
+.edit-link {
+  background-color: rgba(255, 192, 203, 0.553);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 13px;
+  color: rgb(137, 107, 107);
+}
+
+.edit-link:hover, button:hover {
+  box-shadow: 1px 1px 2px 1px rgba(142, 112, 112, 0.121);
+}
+
+.back-button, .go-to-report-form {
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 0px;
+  width: auto;
+  margin: 0px;
+  color: rgb(137, 107, 107);
+}
+
+.back-button:hover, .edit-link:hover {
+  color: rgb(97, 45, 45);
+}
+
+.new {
+  font-size: 15px;
+  width: 80px;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: pink;
+}
+
+/* ----------Table Styling----------- */
+
+#report-table {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  table-layout: fixed;
+}
+
+td, th {
+  border: 1px solid gray;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+th {
+  color: white;
+}
+
+.value {
+  width: 100%;
+}
+
+.attribute {
+  width: auto;
+  font-weight: bold;
+  background-color: rgba(175, 175, 175, 0.477);
+}
+
+thead {
+  background-color: rgb(180, 72, 72);
+}
+
+/* ---------Form Styling------------ */
+
+form > * {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.go-to-report-form {
+  display: flex;
+  align-items: center;
+}
+
+form > h2 {
+  margin: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  height: 2rem;
+  padding: 5px;
+}
+
+.go-to-report-form > input {
+  height: .5rem;
+  width: 35px;
+  margin: 0 0 0 5px;
+}
+
+textarea {
+  height: 5rem;
+  padding: 7px;
+  resize: none;
+}
+
+form > button {
+  margin: auto;
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+.errors {
+  margin: 5px;
+  font-size: 0.95rem;
+  color: rgb(180, 72, 72);
+  font-style: italic;
+}
